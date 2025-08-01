@@ -3,12 +3,18 @@ import 'package:responsive_dashboard/Core/utils/app_images.dart';
 import 'package:responsive_dashboard/Features/home_view/data/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/drawer_item.dart';
 
-class DrawerItemsListView extends StatelessWidget {
+class DrawerItemsListView extends StatefulWidget {
   const DrawerItemsListView({
     super.key,
   });
 
-  static const List<DrawerItemModel> items = [
+  @override
+  State<DrawerItemsListView> createState() => _DrawerItemsListViewState();
+}
+
+class _DrawerItemsListViewState extends State<DrawerItemsListView> {
+  int actIndex = 0;
+  final List<DrawerItemModel> items = [
     DrawerItemModel(
       title: 'Dashboard',
       image: Assets.imagesDashboard,
@@ -38,9 +44,19 @@ class DrawerItemsListView extends StatelessWidget {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(top: 20),
-          child: DrawerItem(drawerItemModel: items[index]),
+        return GestureDetector(
+          onTap: () {
+            if (actIndex != index) {
+              setState(() {
+                actIndex = index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: DrawerItem(
+                isActive: actIndex == index, drawerItemModel: items[index]),
+          ),
         );
       },
     );
