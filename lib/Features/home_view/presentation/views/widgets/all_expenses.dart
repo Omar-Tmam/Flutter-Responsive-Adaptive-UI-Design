@@ -9,26 +9,25 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Container(
-        decoration: ShapeDecoration(
-          color: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: ShapeDecoration(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
         ),
-        child: Column(
-          children: [
-            AllExpensesHeader(),
-            AllExpensesItem(
-                itemModel: AllExpensesItemModel(
-                    image: Assets.imagesCardReceive,
-                    title: 'Income',
-                    date: 'April 2025',
-                    price: r'$20.98')),
-          ],
-        ),
+      ),
+      child: Column(
+        children: [
+          AllExpensesHeader(),
+          SizedBox(height: 16),
+          AllExpensesItem(
+              itemModel: AllExpensesItemModel(
+                  image: Assets.imagesCardReceive,
+                  title: 'Income',
+                  date: 'April 2025',
+                  price: r'$20.98')),
+        ],
       ),
     );
   }
