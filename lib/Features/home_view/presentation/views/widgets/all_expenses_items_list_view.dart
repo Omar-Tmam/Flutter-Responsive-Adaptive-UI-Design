@@ -28,10 +28,11 @@ class AllExpensesItemsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return AllExpensesItem(itemModel: items[index]);
-        });
+    return Row(
+      spacing: 12,
+      children: items
+          .map((e) => Expanded(child: AllExpensesItem(itemModel: e)))
+          .toList(),
+    );
   }
 }
