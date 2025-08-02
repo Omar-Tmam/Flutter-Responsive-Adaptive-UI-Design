@@ -31,7 +31,11 @@ class AllExpensesItemsListView extends StatelessWidget {
     return Row(
       spacing: 12,
       children: items
-          .map((e) => Expanded(child: AllExpensesItem(itemModel: e)))
+          .map((e) => Expanded(
+                  child: AllExpensesItem(
+                isSelected: false,
+                itemModel: e,
+              )))
           .toList(),
     );
   }
