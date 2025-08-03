@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Features/home_view/presentation/views/widge
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/latest_transaction_list_view.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/latest_transaction_section.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/title_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -26,6 +27,13 @@ class QuickInvoice extends StatelessWidget {
             height: 24,
           ),
           LatestTransactionSection(),
+          Divider(
+            height: 48,
+          ),
+          TitleTextField(
+            title: 'Customer Name',
+            hint: 'Type customer name',
+          )
         ],
       ),
     );
