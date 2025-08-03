@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/styles.dart';
-import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/range_options.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
+class Header extends StatelessWidget {
+  const Header({super.key, required this.textHeader, required this.widget});
+  final String textHeader;
+  final Widget widget;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "All Expenses",
+          textHeader,
           style: AppStyles.styleSemiBold20,
         ),
         Expanded(child: SizedBox()),
-        RangeOptions(),
+        widget
       ],
     );
   }
