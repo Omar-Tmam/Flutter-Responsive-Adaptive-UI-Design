@@ -23,6 +23,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
                   height: 24,
                 ),
                 QuickInvoice(),
+                
               ],
             ))
       ],

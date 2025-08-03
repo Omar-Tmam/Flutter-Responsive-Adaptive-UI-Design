@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/all_expenses_header.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/latest_transaction_list_view.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/latest_transaction_section.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -24,7 +25,7 @@ class QuickInvoice extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          LatestTransactionListView(),
+          LatestTransactionSection(),
         ],
       ),
     );
