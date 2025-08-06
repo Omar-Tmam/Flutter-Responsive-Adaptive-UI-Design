@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/styles.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/all_expenses_header.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/transacion_history_list_view.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});
@@ -28,7 +29,7 @@ class TransactionHistory extends StatelessWidget {
             color: Color(0xFFAAAAAA),
           ),
         ),
-        
+        TransacionHistoryListView(),
       ],
     );
   }

@@ -14,18 +14,21 @@ class TransactionItem extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      child: ListTile(
-        title: Text(transactionModel.title, style: AppStyles.styleSemiBold16),
-        subtitle: Text(
-          transactionModel.date,
-          style: AppStyles.styleRegular16,
-        ),
-        trailing: Text(
-          transactionModel.amount,
-          style: AppStyles.styleSemiBold20.copyWith(
-              color: transactionModel.withdrawl
-                  ? Color(0xffF3735E)
-                  : Color(0xff7DD97B)),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListTile(
+          title: Text(transactionModel.title, style: AppStyles.styleSemiBold16),
+          subtitle: Text(
+            transactionModel.date,
+            style: AppStyles.styleRegular16.copyWith(color: Color(0xffAAAAAA)),
+          ),
+          trailing: Text(
+            transactionModel.amount,
+            style: AppStyles.styleSemiBold20.copyWith(
+                color: transactionModel.withdrawl
+                    ? Color(0xffF3735E)
+                    : Color(0xff7DD97B)),
+          ),
         ),
       ),
     );
