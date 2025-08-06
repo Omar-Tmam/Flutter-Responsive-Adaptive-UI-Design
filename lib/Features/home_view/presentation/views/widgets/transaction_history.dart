@@ -28,6 +28,7 @@ class TransactionHistory extends StatelessWidget {
             color: Color(0xFFAAAAAA),
           ),
         ),
+        
       ],
     );
   }
