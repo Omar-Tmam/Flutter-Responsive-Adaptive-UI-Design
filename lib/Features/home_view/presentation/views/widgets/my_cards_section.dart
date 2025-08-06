@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Features/home_view/presentation/views/widge
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/dots_indicator.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_cards_page_view.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/transaction_history.dart';
 
 class MyCardsSection extends StatefulWidget {
   const MyCardsSection({super.key});
@@ -48,6 +49,10 @@ class _MyCardsSectionState extends State<MyCardsSection> {
               DotsIndicator(
                 currentIndex: currentIndex,
               ),
+              Divider(
+                height: 40,
+              ),
+              TransactionHistory()
             ],
           ),
         )
