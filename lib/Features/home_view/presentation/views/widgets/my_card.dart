@@ -22,7 +22,7 @@ class MyCard extends StatelessWidget {
         expiryDate: '12/20',
         cardHolderName: 'Omar Hossny Tammam',
         cvvCode: '124',
-        showBackView: true, //true when you want to show cvv(back) view
+        showBackView: false, //true when you want to show cvv(back) view
         onCreditCardWidgetChange: (CreditCardBrand
             brand) {}, // Callback for anytime credit card brand is changed
       ),

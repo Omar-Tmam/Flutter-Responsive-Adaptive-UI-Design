@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Features/home_view/presentation/views/widge
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_dot.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/dots_indicator.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_card_transaction_history_income_section.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_cards_page_view.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_cards_and_transaction_history_section.dart';
 
@@ -24,7 +25,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
         SizedBox(
           width: 20,
         ),
-        Expanded(child: MyCardsAndTransactionHistorySection()),
+        Expanded(child: MyCardTransactionHistoryIncomeSection()),
       ],
     );
   }
