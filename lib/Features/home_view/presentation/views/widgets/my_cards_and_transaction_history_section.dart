@@ -5,14 +5,16 @@ import 'package:responsive_dashboard/Features/home_view/presentation/views/widge
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_cards_page_view.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/transaction_history.dart';
 
-class MyCardsSection extends StatefulWidget {
-  const MyCardsSection({super.key});
+class MyCardsAndTransactionHistorySection extends StatefulWidget {
+  const MyCardsAndTransactionHistorySection({super.key});
 
   @override
-  State<MyCardsSection> createState() => _MyCardsSectionState();
+  State<MyCardsAndTransactionHistorySection> createState() =>
+      _MyCardsAndTransactionHistorySectionState();
 }
 
-class _MyCardsSectionState extends State<MyCardsSection> {
+class _MyCardsAndTransactionHistorySectionState
+    extends State<MyCardsAndTransactionHistorySection> {
   late PageController pageController;
   int currentIndex = 0;
   @override
