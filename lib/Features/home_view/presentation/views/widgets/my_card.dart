@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:responsive_dashboard/Core/utils/app_images.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
