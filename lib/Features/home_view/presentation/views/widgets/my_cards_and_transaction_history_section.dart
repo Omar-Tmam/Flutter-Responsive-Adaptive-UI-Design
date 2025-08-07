@@ -32,9 +32,6 @@ class _MyCardsAndTransactionHistorySectionState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 40,
-        ),
         CustomBackgroundContainer(
           child: Column(
             children: [
