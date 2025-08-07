@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/income_chart.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/income_section.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/my_cards_and_transaction_history_section.dart';
 
@@ -13,7 +14,7 @@ class MyCardTransactionHistoryIncomeSection extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        IncomeSection(),
+        Expanded(child: IncomeSection()),
       ],
     );
   }
