@@ -20,7 +20,11 @@ class IncomeSection extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                  child: AspectRatio(aspectRatio: 2, child: IncomeChart())),
+                child: AspectRatio(
+                  aspectRatio: 2,
+                  child: IncomeChart(),
+                ),
+              ),
               Expanded(child: IncomeDetails()),
             ],
           )
