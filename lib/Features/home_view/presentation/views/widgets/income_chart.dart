@@ -19,6 +19,7 @@ class _IncomeChartState extends State<IncomeChart> {
 
   PieChartData getChartData() {
     return PieChartData(
+      
         pieTouchData: PieTouchData(
           enabled: true,
           touchCallback: (p0, pieTouchResponse) {
