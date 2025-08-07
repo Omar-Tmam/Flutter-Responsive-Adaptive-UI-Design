@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/dash_board_desktop_layout.dart';
-import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/dashboard_tablet_layout.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/dash_board_tablet_layout.dart';
 
 class DashBoardView extends StatelessWidget {
   const DashBoardView({super.key});
