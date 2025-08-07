@@ -3,16 +3,29 @@ import 'package:responsive_dashboard/Core/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/dash_board_desktop_layout.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/dash_board_mobile_layout.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/dash_board_tablet_layout.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_drawer.dart';
 
-class DashBoardView extends StatelessWidget {
+class DashBoardView extends StatefulWidget {
   const DashBoardView({super.key});
 
   @override
+  State<DashBoardView> createState() => _DashBoardViewState();
+}
+
+class _DashBoardViewState extends State<DashBoardView> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: MediaQuery.sizeOf(context).width < 800 ? CustomDrawer() : null,
       appBar: MediaQuery.sizeOf(context).width < 800
           ? AppBar(
-              leading: Icon(Icons.menu_sharp),
+              leading: IconButton(
+                  onPressed: () {
+                    scaffoldKey.currentState!.openDrawer();
+                  },
+                  icon: Icon(Icons.menu_sharp)),
               backgroundColor: Color(0xfffafafa),
               elevation: 0,
             )
