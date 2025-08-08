@@ -14,21 +14,35 @@ class DashBoardDesktopLayout extends StatelessWidget {
           child: CustomDrawer(),
         ),
         SizedBox(width: 32),
+        //////////////////////////////
         Expanded(
-          flex: 2,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40),
-            child: AllExpensesAndQuickInvoiceSection(),
-          ),
-        ),
-        SizedBox(
-          width: 20,
-        ),
-        Expanded(
-            child: Padding(
-          padding: const EdgeInsets.only(top: 40),
-          child: MyCardTransactionHistoryIncomeSection(),
-        )),
+            flex: 3,
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 40),
+                          child: AllExpensesAndQuickInvoiceSection(),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.only(top: 40),
+                        child: MyCardTransactionHistoryIncomeSection(),
+                      )),
+                    ],
+                  ),
+                )
+              ],
+            ))
       ],
     );
   }
