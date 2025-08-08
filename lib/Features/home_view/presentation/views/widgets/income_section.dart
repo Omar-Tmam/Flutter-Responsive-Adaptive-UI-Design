@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Features/home_view/presentation/views/widge
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/income_chart.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/income_details.dart';
+import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/income_section_body.dart';
 import 'package:responsive_dashboard/Features/home_view/presentation/views/widgets/range_options.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -17,22 +18,10 @@ class IncomeSection extends StatelessWidget {
             textHeader: 'Income',
             widget: RangeOptions(),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: IncomeChart(),
-                ),
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              Expanded(child: IncomeDetails()),
-            ],
-          )
+          IncomeSectionBody()
         ],
       ),
     );
   }
 }
+
