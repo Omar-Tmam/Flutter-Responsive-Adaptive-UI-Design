@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:responsive_dashboard/Core/utils/styles.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -9,6 +10,8 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: CreditCardWidget(
+        
+        textStyle: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
         customCardTypeIcons: [
           CustomCardTypeIcon(
             cardType: CardType.mastercard,

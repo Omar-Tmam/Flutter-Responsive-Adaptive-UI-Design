@@ -12,7 +12,7 @@ class Header extends StatelessWidget {
       children: [
         Text(
           textHeader,
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Expanded(child: SizedBox()),
         widget

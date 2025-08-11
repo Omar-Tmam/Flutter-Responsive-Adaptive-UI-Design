@@ -11,7 +11,7 @@ class TitleTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Customer name', style: AppStyles.styleMedium16),
+        Text('Customer name', style: AppStyles.styleMedium16(context)),
         SizedBox(
           height: 12,
         ),
