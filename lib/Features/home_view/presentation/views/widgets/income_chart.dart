@@ -1,4 +1,3 @@
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,6 @@ class _IncomeChartState extends State<IncomeChart> {
 
   PieChartData getChartData() {
     return PieChartData(
-      
         pieTouchData: PieTouchData(
           enabled: true,
           touchCallback: (p0, pieTouchResponse) {
