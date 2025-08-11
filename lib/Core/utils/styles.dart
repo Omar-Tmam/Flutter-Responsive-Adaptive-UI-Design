@@ -1,8 +1,8 @@
-import 'dart:ui';
+
 
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/Core/utils/responsive_font_size.dart';
-import 'package:responsive_dashboard/Core/utils/size_config.dart';
+
 
 abstract class AppStyles {
   static TextStyle styleRegular12(BuildContext context) {

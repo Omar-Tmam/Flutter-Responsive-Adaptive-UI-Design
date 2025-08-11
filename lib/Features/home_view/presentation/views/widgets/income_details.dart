@@ -32,12 +32,12 @@ class IncomeDetails extends StatelessWidget {
     return Column(
       children: items.map((e) => ItemDetails(incomeDetailModel: e)).toList(),
     );
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ItemDetails(incomeDetailModel: items[index]);
-      },
-    );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return ItemDetails(incomeDetailModel: items[index]);
+    //   },
+    // );
   }
 }
