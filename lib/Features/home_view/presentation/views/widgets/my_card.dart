@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:responsive_dashboard/Core/utils/app_images.dart';
 import 'package:responsive_dashboard/Core/utils/styles.dart';
 
 class MyCard extends StatelessWidget {
@@ -8,27 +9,20 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
-      child: CreditCardWidget(
-        
-        textStyle: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
-        customCardTypeIcons: [
-          CustomCardTypeIcon(
-            cardType: CardType.mastercard,
-            cardImage: SizedBox(),
-          )
-        ],
-        cardType: CardType.mastercard,
-        cardBgColor: Color(0xff4EB7F2),
-        backgroundImage: 'assets/images/back_ground.png',
-        cardNumber: '0918 8124 0042 8129',
-        expiryDate: '12/20',
-        cardHolderName: 'Omar Hossny Tammam',
-        cvvCode: '124',
-        showBackView: false, //true when you want to show cvv(back) view
-        onCreditCardWidgetChange: (CreditCardBrand
-            brand) {}, // Callback for anytime credit card brand is changed
-      ),
-    );
+        aspectRatio: 420 / 215,
+        child: CreditCardWidget(
+          padding: 0,
+          isChipVisible: true,
+          cardBgColor: Colors.blue,
+          backgroundImage: 'assets/images/back_ground.png',
+          cardType: CardType.visa,
+          cardNumber: "0918 8124 0042 8129",
+          expiryDate: "25/08",
+          cardHolderName: "Omar Hossny Tammam",
+          cvvCode: "124",
+          isHolderNameVisible: true,
+          showBackView: false,
+          onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {},
+        ));
   }
 }
